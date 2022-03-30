@@ -1,0 +1,23 @@
+{
+    "name": "Security Proof of Concept",
+    "description": "Tells user they are connecting to an unsecure website",
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "./background.js"
+    },
+    "action": {
+        "default_popup": "./popup.html"
+    },
+    "options_page": "./options.html",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://*/*",
+        "http://*/*"
+    ]
+}
